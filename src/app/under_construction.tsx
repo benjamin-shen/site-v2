@@ -9,10 +9,8 @@ const UnderConstruction = () => {
   return (
     <div className="flex flex-col items-center justify-center p-8 text-center">
       <div
-        className="text-6xl cursor-pointer mb-4"
-        style={{
-          animation: `bounce 2s infinite ${isPressed ? "paused" : "running"}`,
-        }}
+        className="text-6xl cursor-pointer mb-4 animate-bounce"
+        style={{ animationPlayState: isPressed ? "paused" : "running" }}
         onMouseDown={() => setIsPressed(true)}
         onMouseUp={() => setIsPressed(false)}
         onMouseLeave={() => setIsPressed(false)}
